@@ -1,0 +1,328 @@
+Simple Linear Regression
+What is Simple Linear Regression?
+
+Simple Linear Regression is a statistical method that models the relationship between two variables by fitting a linear equation to observed data. The equation is typically of the form:
+𝑌
+=
+𝑚
+𝑋
++
+𝑐
+Y=mX+c
+Where 
+𝑌
+Y is the dependent variable, 
+𝑋
+X is the independent variable, 
+𝑚
+m is the slope, and 
+𝑐
+c is the intercept.
+
+Key assumptions of Simple Linear Regression:
+
+Linearity: The relationship between the independent and dependent variables is linear.
+
+Independence: The observations are independent of each other.
+
+Homoscedasticity: Constant variance of errors (residuals).
+
+Normality: The residuals of the model are normally distributed.
+
+What does the coefficient 
+𝑚
+m represent in the equation 
+𝑌
+=
+𝑚
+𝑋
++
+𝑐
+Y=mX+c?
+
+The coefficient 
+𝑚
+m represents the slope of the regression line. It quantifies the change in 
+𝑌
+Y for a one-unit change in 
+𝑋
+X.
+
+What does the intercept 
+𝑐
+c represent in the equation 
+𝑌
+=
+𝑚
+𝑋
++
+𝑐
+Y=mX+c?
+
+The intercept 
+𝑐
+c represents the value of 
+𝑌
+Y when 
+𝑋
+=
+0
+X=0. It is the point where the regression line intersects the Y-axis.
+
+How do we calculate the slope 
+𝑚
+m in Simple Linear Regression?
+
+The slope 
+𝑚
+m is calculated using the formula:
+𝑚
+=
+𝑛
+(
+∑
+𝑋
+𝑌
+)
+−
+(
+∑
+𝑋
+)
+(
+∑
+𝑌
+)
+𝑛
+(
+∑
+𝑋
+2
+)
+−
+(
+∑
+𝑋
+)
+2
+m= 
+n(∑X 
+2
+ )−(∑X) 
+2
+ 
+n(∑XY)−(∑X)(∑Y)
+​
+ 
+
+What is the purpose of the least squares method in Simple Linear Regression?
+
+The least squares method minimizes the sum of the squared differences between the observed values and the values predicted by the regression line. It ensures the best fit line.
+
+How is the coefficient of determination (R²) interpreted in Simple Linear Regression?
+
+𝑅
+2
+R 
+2
+  represents the proportion of the variance in the dependent variable that is predictable from the independent variable. A value closer to 1 indicates a better fit.
+
+Multiple Linear Regression
+What is Multiple Linear Regression?
+
+Multiple Linear Regression is an extension of simple linear regression that models the relationship between two or more independent variables and a dependent variable.
+
+What is the main difference between Simple and Multiple Linear Regression?
+
+Simple Linear Regression involves only one independent variable, while Multiple Linear Regression involves two or more independent variables.
+
+Key assumptions of Multiple Linear Regression:
+
+Linearity: The relationship between each independent variable and the dependent variable is linear.
+
+Independence: The observations are independent.
+
+Homoscedasticity: Constant variance of errors.
+
+No multicollinearity: Independent variables should not be highly correlated.
+
+Normality: Residuals should be normally distributed.
+
+What is heteroscedasticity, and how does it affect the results of a Multiple Linear Regression model?
+
+Heteroscedasticity occurs when the variance of the residuals is not constant across all values of the independent variable(s). It can lead to inefficient estimates and affect hypothesis testing.
+
+How can you improve a Multiple Linear Regression model with high multicollinearity?
+
+You can remove highly correlated predictors, combine them, or use techniques like Ridge or Lasso regression.
+
+What are some common techniques for transforming categorical variables for use in regression models?
+
+Techniques include one-hot encoding, label encoding, and creating dummy variables.
+
+What is the role of interaction terms in Multiple Linear Regression?
+
+Interaction terms capture the combined effect of two or more independent variables on the dependent variable.
+
+How can the interpretation of intercept differ between Simple and Multiple Linear Regression?
+
+In Simple Linear Regression, the intercept is the value of 
+𝑌
+Y when 
+𝑋
+=
+0
+X=0, but in Multiple Linear Regression, the intercept represents the value of 
+𝑌
+Y when all independent variables are 0.
+
+What is the significance of the slope in regression analysis, and how does it affect predictions?
+
+The slope represents the effect of the independent variable(s) on the dependent variable. A higher slope value indicates a stronger effect of the predictor on the outcome.
+
+What are the limitations of using 
+𝑅
+2
+R 
+2
+  as a sole measure of model performance?
+
+𝑅
+2
+R 
+2
+  does not indicate whether the model is correctly specified or whether it has overfitting. Adjusted 
+𝑅
+2
+R 
+2
+  should be used when comparing models with different numbers of predictors.
+
+How would you interpret a large standard error for a regression coefficient?
+
+A large standard error suggests that the estimate of the regression coefficient is imprecise, indicating high variability in the data or multicollinearity.
+
+Polynomial Regression
+What is polynomial regression?
+
+Polynomial regression is an extension of linear regression where the relationship between the independent variable and the dependent variable is modeled as an nth-degree polynomial.
+
+When is polynomial regression used?
+
+Polynomial regression is used when the relationship between the variables is nonlinear, but a polynomial curve can describe the relationship well.
+
+How does the intercept in a regression model provide context for the relationship between variables?
+
+The intercept indicates the starting point of the model when all predictor variables are zero, providing context for the base level of the dependent variable.
+
+How can heteroscedasticity be identified in residual plots, and why is it important to address it?
+
+Heteroscedasticity can be identified in residual plots if the spread of residuals increases or decreases with the value of the independent variable. It is important to address it to improve model reliability.
+
+What does it mean if a Multiple Linear Regression model has a high 
+𝑅
+2
+R 
+2
+  but low adjusted 
+𝑅
+2
+R 
+2
+ ?
+
+This indicates that the model is overfitting. The high 
+𝑅
+2
+R 
+2
+  suggests a good fit, but the low adjusted 
+𝑅
+2
+R 
+2
+  means the model includes too many variables, leading to overfitting.
+
+Why is it important to scale variables in Multiple Linear Regression?
+
+Scaling variables ensures that all predictors contribute equally to the model, preventing any variable from dominating due to its larger scale.
+
+How does polynomial regression differ from linear regression?
+
+Polynomial regression fits a curved line to the data, while linear regression fits a straight line. Polynomial regression can model nonlinear relationships.
+
+What is the general equation for polynomial regression?
+
+The equation for polynomial regression is:
+𝑌
+=
+𝑏
+0
++
+𝑏
+1
+𝑋
++
+𝑏
+2
+𝑋
+2
++
+𝑏
+3
+𝑋
+3
++
+⋯
++
+𝑏
+𝑛
+𝑋
+𝑛
+Y=b 
+0
+​
+ +b 
+1
+​
+ X+b 
+2
+​
+ X 
+2
+ +b 
+3
+​
+ X 
+3
+ +⋯+b 
+n
+​
+ X 
+n
+ 
+
+Can polynomial regression be applied to multiple variables?
+
+Yes, polynomial regression can be extended to multiple variables by adding interaction terms and higher-degree terms for each predictor.
+
+What are the limitations of polynomial regression?
+
+Polynomial regression can lead to overfitting if the degree of the polynomial is too high. It also can be sensitive to outliers.
+
+What methods can be used to evaluate model fit when selecting the degree of a polynomial?
+
+Cross-validation, Adjusted 
+𝑅
+2
+R 
+2
+ , and plotting residuals are commonly used to evaluate model fit.
+
+Why is visualization important in polynomial regression?
+
+Visualization helps in understanding the nature of the relationship between variables and in determining whether a polynomial model is a good fit.
+
+How is polynomial regression implemented in Python?
+
+Polynomial regression can be implemented in Python using libraries like scikit-learn, where you can use PolynomialFeatures to transform the data and fit a linear model.
